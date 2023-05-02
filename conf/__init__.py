@@ -1,0 +1,1 @@
+# cau hinh cho model
