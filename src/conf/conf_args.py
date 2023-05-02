@@ -1,13 +1,8 @@
-import hydra
 import argparse
+import configparser
+
 
 class ConfArgs:
-
-    @staticmethod
-    @hydra.main(config_path="../../conf", config_name="model")
-    def get_args_system(cfg):
-        # config by system
-        print(cfg["params"]["name_model"])
 
     @staticmethod
     def get_args_user():
@@ -21,3 +16,12 @@ class ConfArgs:
 
         args = parser.parse_args()
         return args
+
+    @staticmethod
+    def get_args_system():
+        # config by system
+        config = configparser.ConfigParser()
+        config.read('./conf/model.ini') #epoch = config['model']['epoch']
+        
+        return config
+    

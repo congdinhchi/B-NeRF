@@ -5,7 +5,7 @@ if __name__ == "__main__":
     logger.info("Starting B-NeRF")
     
     conf_args = ConfArgs()
-    args_system = conf_args.get_args_system()
-    args_user = conf_args.get_args_user()
+    args = conf_args.get_args_user()
+    conf = conf_args.get_args_system()
 
-    print(args_user.name_method)
+
