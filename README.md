@@ -12,7 +12,7 @@ pip install -r requirements.txt
 Download from here
     - [NeRF Data](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1)
 
-Prepare your data [Tutorial here]()
+Prepare your data [Tutorial here](https://github.com/congdinhchi/B-NeRF/tree/main/data)
 ## Run
 
 `python -m scripts.run`  
