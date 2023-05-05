@@ -400,7 +400,7 @@ FodyWeavers.xsd
 # CongDC
 /.DS_Store
 outputs/**
-logs/**
+logs/
 processed/
 raw/
-.vscode
+.vscode/**
