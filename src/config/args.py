@@ -1,6 +1,7 @@
 import argparse
 import configparser
-
+import os 
+from src.const.path import CONFIG_PATH
 
 class ConfArgs:
 
@@ -18,10 +19,11 @@ class ConfArgs:
         return args
 
     @staticmethod
-    def get_args_system():
-        # config by system
+    def get_args_model():
+        # config by model
         config = configparser.ConfigParser()
-        config.read('./conf/model.ini') #epoch = config['model']['epoch']
+        file_config_path = os.path.join(CONFIG_PATH, "model.ini")
+        config.read(file_config_path) #epoch = config['model']['epoch']
         
         return config
     
