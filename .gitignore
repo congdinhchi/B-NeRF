@@ -397,7 +397,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+# CongDC
 /.DS_Store
 outputs/**
 logs/**
-
+processed/
+raw/

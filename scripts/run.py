@@ -8,4 +8,4 @@ if __name__ == "__main__":
     args_user = conf_args.get_args_user()
     args_model = conf_args.get_args_model()
 
-    print(args_model["model"]["random_seed"])
+    print(args_user.data_path)

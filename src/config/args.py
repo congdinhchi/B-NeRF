@@ -12,8 +12,8 @@ class ConfArgs:
 
         parser.usage = "User manual B-NeRF"
 
-        parser.add_argument("--name_method", metavar="name_method", type=str, help="method choice")
-        parser.add_argument("-c", '--continue_training', help="is continue training", action="store_true")
+        parser.add_argument("--data_path", metavar="path save data", type=str, help="./raw/<case_name>")
+        # parser.add_argument("-c", '--continue_training', help="is continue training", action="store_true")
 
         args = parser.parse_args()
         return args
