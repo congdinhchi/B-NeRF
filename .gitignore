@@ -403,3 +403,4 @@ outputs/**
 logs/**
 processed/
 raw/
+.vscode
