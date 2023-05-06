@@ -399,7 +399,7 @@ FodyWeavers.xsd
 
 # CongDC
 /.DS_Store
-outputs/**
+outputs/
 logs/
 processed/
 raw/
