@@ -1,6 +1,7 @@
 import argparse
 import configparser
 import os 
+from src.lib.loguru import logger
 from src.const.path import CONFIG_PATH
 
 class ConfArgs:
@@ -16,6 +17,7 @@ class ConfArgs:
         # parser.add_argument("-c", '--continue_training', help="is continue training", action="store_true")
 
         args = parser.parse_args()
+        
         return args
 
     @staticmethod
