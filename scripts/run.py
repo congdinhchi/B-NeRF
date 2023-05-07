@@ -10,6 +10,11 @@ def set_params(random_seed):
     np.random.seed(random_seed)
     tf.random.set_seed(random_seed)
 
+def train(args_user, args_model, list_image_path: list) -> None:
+    if args_user.continue_training is None:
+        logger.info(f"Starting train ...")
+    else:
+        logger.info("Continue train")
 
 if __name__ == "__main__":
     logger.debug("Starting B-NeRF")
@@ -27,6 +32,9 @@ if __name__ == "__main__":
         data_path = os.path.join(DATA_PROCESS_PATH, args_user.case)
         data_model = DataManager(data_path)
         list_image_path = data_model.get_images_path()
+        train(args_user, args_model,list_image_path)
     except:
         logger.error("No name case! You need add --case <case_name> in terminal")
 
+
+    
