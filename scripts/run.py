@@ -10,7 +10,15 @@ def set_params(random_seed):
     np.random.seed(random_seed)
     tf.random.set_seed(random_seed)
 
-def train(args_user, args_model, list_image_path: list) -> None:
+def train(args_user, args_model) -> None:
+    
+    # load data
+    try:
+        data_path = os.path.join(DATA_PROCESS_PATH, args_user.case)
+        data_model = DataManager(data_path)
+    except:
+        logger.error("No name case! You need add --case <case_name> in terminal")
+
     if args_user.continue_training is None:
         logger.info(f"Starting train ...")
     else:
@@ -27,14 +35,10 @@ if __name__ == "__main__":
     random_seed = int(args_model["model"]["random_seed"])
     set_params(random_seed)
 
-    # load data
-    try:
-        data_path = os.path.join(DATA_PROCESS_PATH, args_user.case)
-        data_model = DataManager(data_path)
-        list_image_path = data_model.get_images_path()
-        train(args_user, args_model,list_image_path)
-    except:
-        logger.error("No name case! You need add --case <case_name> in terminal")
+    # train
+    train(args_user, args_model)
+    
 
+    
 
     
