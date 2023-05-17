@@ -28,7 +28,7 @@ processed/<case_name>
 `python -m scripts.run`  
 
 *args*
-    - `--case ./processed/<case_name>--case ./processed/<case_name>`
+    - `--case ./processed/<case_name>`
     - `--continue_training  ./processed/<case_name>/record/<name_record>`
 
     
