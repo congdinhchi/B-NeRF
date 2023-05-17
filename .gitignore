@@ -403,4 +403,5 @@ outputs/
 logs/
 processed/
 raw/
+nerf_example/
 .vscode/**
