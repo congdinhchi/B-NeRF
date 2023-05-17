@@ -3,6 +3,7 @@ import configparser
 import os 
 from src.lib.loguru import logger
 from src.const.path import CONFIG_PATH
+import tensorflow as tf
 
 class ConfArgs:
 
@@ -27,6 +28,8 @@ class ConfArgs:
         config = configparser.ConfigParser()
         file_config_path = os.path.join(CONFIG_PATH, "model.ini")
         config.read(file_config_path) #epoch = config['model']['epoch']
-        
-        return config
-    
+        args_model = dict(config["model"])
+
+        # add
+        args_model["auto"] = tf.data.AUTOTUNE
+        return args_model
