@@ -4,9 +4,9 @@ import os
 import shutil
 from tqdm import tqdm
 #config
-data_path = "..\\data\\raw\\crane"
+data_path = ".\\data\\raw\\chair"
 
-area = 1000
+area = 200
 
 if __name__ == "__main__":
     '''Crop ảnh tự động'''
