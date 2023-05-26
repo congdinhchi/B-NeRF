@@ -6,7 +6,7 @@ import shutil
 from PIL import Image
 
 # Đường dẫn đến file ảnh
-data_path =".\\data\\raw\\lego\\val"
+data_path =".\\data\\raw\\lego2\\images"
 list_img_path_1 = glob(f"{data_path}\\*")
 
 list_img_path = []

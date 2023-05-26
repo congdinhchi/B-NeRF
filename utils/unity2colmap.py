@@ -4,8 +4,8 @@ from glob import glob
 import shutil
 
 # config
-data_path = ".\\data\\raw\\shoe2"
-type_data = "images"
+data_path = ".\\data\\raw\\shoe"
+type_data = "val"
 
 find_path = os.path.join(data_path, type_data, "*")
 
