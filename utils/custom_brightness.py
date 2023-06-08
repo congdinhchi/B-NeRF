@@ -6,7 +6,7 @@ import shutil
 from PIL import Image
 
 # Đường dẫn đến file ảnh
-data_path =".\\data\\raw\\lego2\\images"
+data_path =".\\data\\processed\\lego\\train"
 list_img_path_1 = glob(f"{data_path}\\*")
 
 list_img_path = []
@@ -30,7 +30,7 @@ for img_path in list_img_path:
     image = np.array(image)
 
     # Độ sáng ngẫu nhiên
-    brightness_factor = np.random.uniform(0.5, 1.5)
+    brightness_factor = np.random.uniform(0.95, 1.05)
 
     # Áp dụng thay đổi độ sáng lên ảnh
     brightened_image = np.clip(image * brightness_factor, 0, 255).astype(np.uint8)
