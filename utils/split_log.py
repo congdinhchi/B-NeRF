@@ -3,7 +3,7 @@ from glob import glob
 import os
 import shutil
 
-image_path = ".\\data\\B_nerf_random"
+image_path = ".\\data\\nerf_random"
 
 def split_image(image, start, end, name_img):
     new_image = image[:, start:end]
